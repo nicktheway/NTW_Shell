@@ -33,7 +33,7 @@ Therefore, the program needs to make that *array string* and make the last eleme
 
 So, to store all the above information and have them nicely organized, the `struct command` datatype was created and used.
 
-The enumerators `E_delimeter_type` and `E_special_type` were used for storing the delimiters and the special type of each command for better readability of the program.
+The enumerators `E_delimiter_type` and `E_special_type` were used for storing the delimiters and the special type of each command for better readability of the program.
 
 ### Program's main loop
 The program starts by entering into the `interactive mode` or the `batch file mode` based on the number of arguments provided at the execution. If there are two arguments it enters into the `batch file mode` only if the second argument (the first is always the program's name) is a valid file's name, if it isn't or there is no second argument it enters the `interactive mode` by setting the input data file pointer to `stdin`.
