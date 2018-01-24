@@ -170,7 +170,7 @@ int main(int argc, char** argv)
       if (status){
         fprintf(stderr, "Command: \"%s\" failed to run\n", commands[i].args[0]);
 
-        // If __FORCE_EXTI_ON_ERROR is defined:
+        // If __FORCE_EXΙΤ_ON_ERROR is defined:
         //  In case there isn't a ";" after the failed command, exit
         int exit_flag = 1;
         for (int ff = command_num-1; ff >= i; ff--){
