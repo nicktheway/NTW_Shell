@@ -37,9 +37,9 @@ const char delim_dand[] = "&&";
 const char delim_semicolon[] = ";";
 
 /**
- * Enumerator for the various delimeters
+ * Enumerator for the various delimiters
  */ 
-enum E_delimeter_type{
+enum E_delimiter_type{
   EDT_none,
   EDT_double_and, // &&
   EDT_semicolon   // ;
@@ -58,14 +58,14 @@ enum E_special_type{
 /**
  * The type <struct command> includes:
  * -String array for the command arguments.
- * -Two E_delimeter_type enums for the previous and the next delimeters.
+ * -Two E_delimiter_type enums for the previous and the next delimiters.
  * -An E_special_type enum for the command's special type.
  * -An int for storing the number of the command's arguments.
  */ 
 struct command{
   char (*args)[MAX_ARG_SIZE];
-  enum E_delimeter_type p_del;
-  enum E_delimeter_type n_del;
+  enum E_delimiter_type p_del;
+  enum E_delimiter_type n_del;
   enum E_special_type special; // Special commands are executed by the parent.
   int arg_num;
 };
@@ -247,7 +247,7 @@ int is_whitespace(const char* s){
 void parseBuffer(const char* buffer, struct command** commands, int* command_num)
 {
   int command_number = 0;
-  enum E_delimeter_type temp_del = EDT_none;
+  enum E_delimiter_type temp_del = EDT_none;
   const char* sub1, *sub2;
   const char* subbuffer = buffer;
 
