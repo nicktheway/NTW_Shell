@@ -6,8 +6,10 @@ Then execute the commands:
   - `cd path_to_files`
   - `make` or `make all`
   - `./ntw_shell` or `./fe_shell`
-
-TODO: continue this readme file.
+  
+To clean the made files use:
+- `make clean` for the `.o` files and
+- `make clean` for the executables
 
 ## Program's and source code explanation
 The aim of the exercise was to make a **unix shell program** that would execute commands by forking new processes which would use the
