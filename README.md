@@ -9,7 +9,7 @@ Then execute the commands:
   
 To clean the made files use:
 - `make clean` for the `.o` files and
-- `make clean` for the executables
+- `make clean2` for the executables
 
 ## Program's and source code explanation
 The aim of the exercise was to make a **unix shell program** that would execute commands by forking new processes which would use the
