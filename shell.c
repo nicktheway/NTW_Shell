@@ -94,7 +94,7 @@ int main(int argc, char** argv)
     return 1;
   }
   if (argc == 2){
-    fd = fopen(argv[1], "a+");
+    fd = fopen(argv[1], "r");
     if (fd == NULL){
       fprintf(stderr, "Couldn't open file: %s\nEntering Interactive Mode...\n", argv[1]);
       fd = stdin;
