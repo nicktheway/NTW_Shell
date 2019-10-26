@@ -351,7 +351,7 @@ enum E_special_type special_type(char *s)
     return EST_QUIT;
   }
 
-  if (strlen(s) < 2) return 0;
+  if (strlen(s) < 2) return EST_none;
   else if (s[0] == 'c' && s[1] == 'd')
   {
     return EST_CD;
