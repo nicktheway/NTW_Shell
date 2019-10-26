@@ -345,16 +345,17 @@ void parseBuffer(const char* buffer, struct command** commands, int* command_num
  */ 
 enum E_special_type special_type(char *s)
 {
-  if (strlen(s) < 4){}
-  else if (s[0] == 'q' && s[1] == 'u' && s[2] == 'i' && s[3] == 't')
+  if (strlen(s) < 2) return EST_none;
+
+  if (s[0] == 'q' && s[1] == 'u' && s[2] == 'i' && s[3] == 't')
   {
     return EST_QUIT;
   }
 
-  if (strlen(s) < 2) return 0;
-  else if (s[0] == 'c' && s[1] == 'd')
+  if (s[0] == 'c' && s[1] == 'd')
   {
     return EST_CD;
   }
+
   return EST_none;
 }
